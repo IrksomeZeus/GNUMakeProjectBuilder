@@ -1,0 +1,78 @@
+Help on module project_builder:
+
+NAME
+    project_builder
+
+FUNCTIONS
+    doMakeOperation(project_dir_path, operation='')
+        Performs make operation and generates log files.
+        
+        Args:
+            project_dir_path (type): Description of parameter `project_dir_path`.
+            operation (type): Make rule to execute. Defaults to ''.
+    
+    main()
+        Builds projects based on the .build_order.txt file.
+        
+        Reads in the .build_order.txt file to determine make operations and
+        configuration settings for building the projects listed. By default,
+        every vairiant inside the project's variant.mk file is built
+    
+    makeVariant(workspace_path, variant_file_path, operations)
+        Configures and performs a make operation for the specified variant.
+        
+        Args:
+            workspace_path (string): Path to the directory in which to run make.
+            variant_file_path (string): Path to this build's variant file in order
+                to configure build type.
+            operations (dict): Dictionary containing build information for this
+                variant.
+    
+    parseBuildOrders(build_script_path)
+        Reads .build_order.txt and returns a list of the make operations.
+        
+        Args:
+            build_script_path (string): Path to the .build_order.txt file.
+        
+        Returns:
+            dict: Returns a dictionary object containing the build instructions for
+                each project.
+    
+    readBuildVariants(file_path)
+        Reads variants file and returns a list of the variants to build.
+        
+        Args:
+            file_path (string): Path to the variants file.
+        
+        Returns:
+            list: Returns a list containing each variant listed in the variants
+                file.
+    
+    readVariantFile(variant_file_path, variant_data)
+        Reads variant file into the supplied list.
+        
+        Args:
+            variant_file_path (string): Path to the variant file.
+            variant_data (list): List to store the lines of the variant file.
+    
+    updateBuildType(variant_file_path, build_type)
+        Updates the variant BUILD_TYPE if changed.
+        
+        Args:
+            variant_file_path (string): path to the variant file
+            build_type (string): build configuration type to set
+    
+    writeVariantFile(variant_file_path, variant_data)
+
+DATA
+    DEFAULT_BUILD_SCRIPT = '.build_order.txt'
+    DEFAULT_CONFIG = 'debug'
+    DEFAULT_LOG_FILE_PATH = r'C: \Users\yatesau\Documents\_Logs\project_bu...
+    DEFAULT_MAKE_OPERATION = ''
+    DEFAULT_VARIANT_DIRECTORY = '__VariantConfig__'
+    DEFAULT_WORKSPACE_PATH = r'C:\Users\yatesau\Documents\momentics_worksp...
+
+FILE
+    c:\users\yatesau\documents\pythondev\gnumakeprojectbuilder\project_builder.py
+
+
