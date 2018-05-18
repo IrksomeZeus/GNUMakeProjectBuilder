@@ -1,0 +1,13 @@
+# Build instructions for the Project Builder Script
+# Specify config --> config:release|debug|both
+# Specify make operation --> operation:arg
+#       examples: operation:all, operation:target, operation:clean
+
+# Lines that do not start with a keyword or operation number are ignored.
+
+variant: _VariantVP4.mk
+config:debug
+operation:
+1:vs_logger
+1:vs_can
+1:vs__vehicle
